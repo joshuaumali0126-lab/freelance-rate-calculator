@@ -95,13 +95,19 @@
     .grid{ grid-template-columns: 1fr; }
   }
 
-  .card{
-    background: var(--paper-light);
-    border: 1px solid var(--line);
-    border-radius: 10px;
-    padding: 28px;
-    box-shadow: var(--shadow);
-  }
+  .card {
+  background: var(--paper-light);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.12);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 22px 55px rgba(0,0,0,0.15);
+}
 
   .field{
     margin-bottom: 20px;
@@ -280,7 +286,7 @@
     margin-bottom:6px;
     display:block;
   }
-  .aff-card a{
+  .aff- a{
     color: var(--brass);
     font-weight:600;
     text-decoration:none;
@@ -314,14 +320,15 @@
 <body>
 <div class="wrap">
 
-  <header class="hero">
-    <div>
-      <div class="eyebrow">Rate Card / No. 001</div>
-      <h1>What should you actually charge?</h1>
-      <p>Enter your real numbers below — income goal, hours, expenses — and get a rate built on math, not a guess pulled from a job board.</p>
-    </div>
-    <div class="stamp">Not financial advice</div>
-  </header>
+  <header style="text-align:center; padding:60px 20px;">
+  <h1 style="font-size:36px; margin-bottom:10px;">
+    Freelance Rate Calculator
+  </h1>
+
+  <p style="font-size:16px; color:#666; max-width:600px; margin:0 auto;">
+    Instantly calculate your ideal hourly and project rates based on your income goals, expenses, and billable hours.
+  </p>
+</header>
 
   <div class="grid">
     <!-- LEFT: inputs -->
